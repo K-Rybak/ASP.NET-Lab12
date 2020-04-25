@@ -1,0 +1,17 @@
+﻿
+@{
+    var data = ViewBag.Message; ;
+}
+
+<h2>Текст отправленного сообщения</h2>
+
+<div>
+    @data
+</div>
+
+<br />
+
+@using (Html.BeginForm("Index", "Chat", FormMethod.Post))
+{
+    <button class="btn">Вернуться</button>
+}

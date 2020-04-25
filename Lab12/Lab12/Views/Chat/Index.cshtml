@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Lab12.Models.MessageData>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Главное окно</h2>
+
+<h2><a href="/Chat/MessageCreate">Написать сообщение</a></h2>
+
+<div><h3>@ViewBag.currentUser</h3></div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">@Html.Label("Заголовок сообщения")</th>
+            <th scope="col">@Html.Label("От кого")</th>
+            <th scope="col">@Html.Label("Дата получения")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>               
+                <td>@Html.ActionLink(item.Title, "MessageView", "Chat",
+                   new { title = item.Title, login = item.Login }, null)
+                </td>
+                <td>@item.Login</td>
+                <td>@item.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mregister">
+    <div id="registerfrom">
+        <h1>Регистрация</h1>
+        <form action="" id="registerform" method="post" >
+            <p>
+                <label for="user_login">
+                    Имя пользолвателя<br>
+                    <input class="input" id="username" name="Login" size="20" type="text" value="">
+                </label>
+            </p>
+            <p>
+                <label for="user_pass">
+                    Пароль<br>
+                    <input class="input" id="password" name="Password" size="32" type="password" value="">
+                </label>
+            </p>
+ 
+            <p>
+                <label for="user_pass">
+                    Фимилия<br>
+                    <input class="input" id="surname" name="Surname" size="32" type="text" value="">
+                </label>
+            </p>
+            <p>
+                <label for="user_pass">
+                    Имя<br>
+                    <input class="input" id="name" name="Name" size="32" type="text" value="">
+                </label>
+            </p>
+            <p>
+                    Отчество<br>
+                    <input class="input" id="patronymic" name="Patronymic" size="26" type="text" value=""> 
+            </p>
+            <p class="submit"><input class="button" id="registr" type="submit" value="Зарегистрироваться"></p>
+            <p class="regtext">Уже зарегистрированы? <a href="/Home/Index">Авторизация</a></p>
+        </form>
+    </div>
+</div>
+
